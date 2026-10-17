@@ -1,0 +1,6 @@
+{
+  "name": "رحلة إلى العربية - بازی آموزش عربی",
+  "description": "بازی آموزشی تعاملی و ماجراجویانه برای یادگیری زبان عربی از صفر تا پیشرفته با نقشه مراحل، صدا، آزمون و شخصیت هدهد",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
