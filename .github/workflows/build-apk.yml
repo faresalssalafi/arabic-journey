@@ -21,10 +21,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
 
       - name: Install dependencies
-        run: npm install
+        run: npm install --no-package-lock
 
       - name: Build web app
         run: npm run build
@@ -35,7 +34,13 @@ jobs:
           distribution: temurin
           java-version: 21
 
-      - name: Sync Capacitor Android
+      - name: Prepare Android project
+        run: |
+          if [ ! -d android ]; then
+            npx cap add android
+          fi
+
+      - name: Sync Capacitor
         run: npx cap sync android
 
       - name: Build APK
